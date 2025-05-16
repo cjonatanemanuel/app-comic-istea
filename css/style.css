@@ -1,0 +1,176 @@
+/* ========================
+   Reset
+   ======================== */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================
+   Estilos base y fuentes
+   ======================== */
+body {
+  font-family: 'Bangers', cursive;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================
+   Header
+   ======================== */
+header {
+  background-color: #c00000; 
+  color: white;
+  position: fixed; /* Fija el header */
+  top: 0; /* Lo pega a la parte superior */
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.logo {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+main h1{
+  padding-top: 80px; /*Ajusta el valor según la altura del header. */
+}
+
+/* ========================
+   Galería de productos
+   ======================== */
+#product-list .card {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+#product-list .card:hover {
+  transform: scale(1.03);
+}
+
+.btn-primary {
+  background-color: #c00000;
+  border-color: #c00000;
+}
+
+.btn-primary:hover {
+  background-color: #9a0000; /* Tono más oscuro para el hover */
+  border-color: #9a0000;
+}
+
+.modal-footer .btn-primary {
+  background-color: #c00000;
+  border-color: #c00000;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #9a0000;
+  border-color: #9a0000;
+}
+
+.modal-footer #modal-buy-btn {
+  padding: 0.60rem 3rem; /* Aumenta el padding vertical y horizontal */
+  font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* ========================
+   Carrito lateral
+   ======================== */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /*oculto inicialmente */
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+  transform: translateX(400px);
+}
+
+.cart-sidebar.show {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* Ítems del carrito */
+#cart-items img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cart-item .btn {
+  margin-left: 5px;
+}
+
+/* ========================
+   Modal producto
+   ======================== */
+.modal-product {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-body {
+  max-height: 75vh; /* 75% de la altura de la ventana */
+  overflow-y: auto; /*Barra de desplazamiento vertical cuando el contenido excede la altura máxima */
+}
+
+.modal-product {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem; /* Añadimos un poco de margen inferior para separar de la descripción */
+}
+
+/* ========================
+   Footer
+   ======================== */
+footer {
+  background-color: #111;
+}
+
+/* ========================
+   Responsive
+   ======================== */
+@media (max-width: 768px) {
+  .cart-sidebar {
+    width: 95%;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ========================
+   Animaciones
+   ======================== */
+.cart-sidebar,
+.modal-content {
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+  transform: scale(0.9);
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+}
