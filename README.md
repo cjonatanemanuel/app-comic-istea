@@ -4,6 +4,8 @@ Un proyecto de catálogo de historietas desarrollado para la materia Laboratorio
 
 MICOMIC es una plataforma web que presenta un catálogo interactivo de historietas, permitiendo a los usuarios explorar los cómics disponibles y añadirlos a un carrito de compras.
 
+![Captura del proyecto](./img/fotopagina.png)
+
 **🚀 Demostración en vivo**
 
 Puedes ver el proyecto en funcionamiento aquí: [https://micomic2025.netlify.app/](https://micomic2025.netlify.app/)
